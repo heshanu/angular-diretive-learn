@@ -4,7 +4,7 @@
   <ul class="pagination">
     <li class="page-item" [ngClass]="{disabled:currentPage==0}"><a class="page-link" href="" (click)="currentPage=currentPage-1"   >Prev</a> </li>
     <ng-container  *ngFor="let im of images;let i=index;">
-      <li class="page-item"  *ngIf="i<5" [ngClass]="{active:i==currentPage} ">
+      <li class="page-item"  *ngIf=" checkWindowIndex(i)" [ngClass]="{active:i==currentPage} ">
           <a class="page-link" (click)="currentPage=i">{{i+1}}</a>
   </li>
     </ng-container>

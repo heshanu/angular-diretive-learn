@@ -27,5 +27,9 @@ currentPage=1;
 
  ];
 
+ //adde index when press next button
+ checkWindowIndex(index:number){
+    return Math.abs(this.currentPage-index)<5;
+ }
  
 }
